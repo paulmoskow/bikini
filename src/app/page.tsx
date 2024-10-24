@@ -13,7 +13,7 @@ export default function Home() {
           height={35}
           priority
         /> 
-        <nav className="flex gap-3 sm:gap-5 items-end">
+        <nav className="flex gap-3.5 sm:gap-5 items-end">
           <a 
             className="font-semibold text-[12px] sm:text-[12px]"
             href="tel:+79056339811"
