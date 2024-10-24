@@ -4,7 +4,7 @@ import Link from 'next/link';
 export default function Home() {
   return (
     <div className="grid grid-rows-[65px_1fr_100px] min-h-screen mx-auto w-[98%] max-w-[1024px] font-[family-name:var(--font-exo2)]">
-      <header className="flex row-start-1 items-center justify-between px-4 bg-white rounded-[0.5rem] h-[60px] mt-1 border border-[rgba(0,0,0,0.15)]">
+      <header className="flex row-start-1 items-center justify-between px-3 bg-white rounded-[0.5rem] h-[60px] mt-1 border border-[rgba(0,0,0,0.15)]">
         <Image
           className=""
           src="/bikini/bikini_logo-header.svg"
@@ -13,9 +13,9 @@ export default function Home() {
           height={35}
           priority
         /> 
-        <nav className="flex gap-2.5 sm:gap-5 items-end">
+        <nav className="flex gap-3 sm:gap-5 items-end">
           <a 
-            className="font-semibold text-[11px] sm:text-[12px]"
+            className="font-semibold text-[12px] sm:text-[12px]"
             href="tel:+79056339811"
           >
             +7&nbsp;905&nbsp;633&nbsp;98&nbsp;11     
@@ -29,8 +29,8 @@ export default function Home() {
               className=""
               src="/bikini/whatsapp-icon.svg"
               alt="WhatsApp logo"
-              width={20}
-              height={20}
+              width={17}
+              height={17}
               priority            
             />
           </a>
@@ -39,10 +39,10 @@ export default function Home() {
           >
             <Image 
               className=""
-              src="/bikini/basket_icon.svg"
+              src="/basket_icon.svg"
               alt="basket button"
-              width={20}
-              height={20}
+              width={17}
+              height={17}
               priority            
             />
           </Link>
@@ -50,11 +50,11 @@ export default function Home() {
             href="/menu"  
           >
             <Image 
-              className="mb-[-5px]"
+              className="mb-[-4px]"
               src="/bikini/menu_icon.svg"
               alt="menu button"
-              width={30}
-              height={30}
+              width={25}
+              height={25}
               priority            
             />
           </Link>
