@@ -39,7 +39,7 @@ export default function Home() {
           >
             <Image 
               className=""
-              src="/basket_icon.svg"
+              src="/bikini/basket_icon.svg"
               alt="basket button"
               width={17}
               height={17}
