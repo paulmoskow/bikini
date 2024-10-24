@@ -7,7 +7,7 @@ export default function Home() {
       <header className="flex row-start-1 items-center justify-between px-4 bg-white rounded-[0.5rem] h-[60px] mt-1 border border-[rgba(0,0,0,0.15)]">
         <Image
           className=""
-          src="/bikini/bikini_logo-header.svg"
+          src="/bikini_logo-header.svg"
           alt="Bikini logo"
           width={120}
           height={35}
@@ -27,7 +27,7 @@ export default function Home() {
           >
             <Image 
               className=""
-              src="/bikini/whatsapp-icon.svg"
+              src="/whatsapp-icon.svg"
               alt="WhatsApp logo"
               width={20}
               height={20}
@@ -39,7 +39,7 @@ export default function Home() {
           >
             <Image 
               className=""
-              src="/bikini/basket_icon.svg"
+              src="/basket_icon.svg"
               alt="basket button"
               width={20}
               height={20}
@@ -51,7 +51,7 @@ export default function Home() {
           >
             <Image 
               className="mb-[-5px]"
-              src="/bikini/menu_icon.svg"
+              src="/menu_icon.svg"
               alt="menu button"
               width={30}
               height={30}
@@ -64,7 +64,7 @@ export default function Home() {
         <h1 className="text-sm text-center lowercase text-[10px] font-middle mx-0 my-2">
           Онлайн шоурум пляжной одежды 
           <Image 
-            src="/bikini/map_point.svg" 
+            src="/map_point.svg" 
             alt="Location Pin" 
             className="inline-block mx-1" 
             width={12}
@@ -75,7 +75,7 @@ export default function Home() {
 
         <div className="flex items-center justify-center w-full mx-0">
           <Link
-            className="relative w-full max-w-[1140px] min-h-[400px] bg-[url('/bikini/background-pic.jpg')] bg-center bg-no-repeat bg-cover mx-auto overflow-hidden z-0 border border-[rgba(0,0,0,0.1)] rounded-[0.5rem]"
+            className="relative w-full max-w-[1140px] min-h-[400px] bg-[url('/background-pic.jpg')] bg-center bg-no-repeat bg-cover mx-auto overflow-hidden z-0 border border-[rgba(0,0,0,0.1)] rounded-[0.5rem]"
             href="/offers"            
           >
             <div className="bg-[rgba(255,226,240,0.4)] w-full h-full transition-colors duration-500 absolute left-0 top-0 flex flex-col justify-center items-center">
