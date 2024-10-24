@@ -1,52 +1,89 @@
 import Image from "next/image";
+import Link from 'next/link';
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
+    <div className="grid grid-rows-[65px_1fr_100px] min-h-screen mx-auto w-[98%] max-w-[1024px] font-[family-name:var(--font-exo2)]">
+      <header className="flex row-start-1 items-center justify-between px-4 bg-white rounded-[0.5rem] h-[60px] mt-1 border border-[rgba(0,0,0,0.15)]">
         <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
+          className=""
+          src="/bikini_logo-header.svg"
+          alt="Bikini logo"
+          width={120}
+          height={35}
           priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
+        /> 
+        <nav className="flex gap-2.5 sm:gap-5 items-end">
+          <a 
+            className="font-semibold text-[11px] sm:text-[12px]"
+            href="tel:+79056339811"
+          >
+            +7&nbsp;905&nbsp;633&nbsp;98&nbsp;11     
+          </a>
           <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            href="https://wa.me/79056339811"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
+            <Image 
+              className=""
+              src="/whatsapp-icon.svg"
+              alt="WhatsApp logo"
               width={20}
               height={20}
+              priority            
             />
-            Deploy now
           </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link 
+            href="/cart"
           >
-            Read our docs
-          </a>
+            <Image 
+              className=""
+              src="/basket_icon.svg"
+              alt="basket button"
+              width={20}
+              height={20}
+              priority            
+            />
+          </Link>
+          <Link 
+            href="/menu"  
+          >
+            <Image 
+              className="mb-[-5px]"
+              src="/menu_icon.svg"
+              alt="menu button"
+              width={30}
+              height={30}
+              priority            
+            />
+          </Link>
+        </nav>       
+      </header>
+      <main className="flex flex-col gap-1 row-start-2 align-center mx-0">
+        <h1 className="text-sm text-center lowercase text-[10px] font-middle mx-0 my-2">
+          Онлайн шоурум пляжной одежды 
+          <Image 
+            src="/map_point.svg" 
+            alt="Location Pin" 
+            className="inline-block mx-1" 
+            width={12}
+            height={12}
+          />
+          Москва
+        </h1>
+
+        <div className="flex items-center justify-center w-full mx-0">
+          <Link
+            className="relative w-full max-w-[1140px] min-h-[400px] bg-[url('/background-pic.jpg')] bg-center bg-no-repeat bg-cover mx-auto overflow-hidden z-0 border border-[rgba(0,0,0,0.1)] rounded-[0.5rem]"
+            href="/offers"            
+          >
+            <div className="bg-[rgba(255,226,240,0.4)] w-full h-full transition-colors duration-500 absolute left-0 top-0 flex flex-col justify-center items-center">
+              <h2 className="text-[2rem] font-light text-white no-underline uppercase sm:text-[4rem] md:text-[5.5rem]">
+                Бестселлеры
+              </h2>
+            </div>
+          </Link>
         </div>
       </main>
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
