@@ -47,8 +47,7 @@ export default function RootLayout({
             <h1 className="text-center lowercase text-[11px] font-middle mx-0 my-2">
               Онлайн шоурум пляжной одежды 
               <Image 
-                src="/map_point.svg"
-                /* src="/bikini/map_point.svg" */ 
+                src="/bikini/map_point.svg"
                 alt="Location Pin" 
                 className="inline-block mx-1" 
                 width={12}

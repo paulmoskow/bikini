@@ -9,8 +9,7 @@ export default function Header() {
       >
         <Image
           className=""
-          src="/bikini_logo-header.svg"
-          /*  src="/bikini/bikini_logo-header.svg" */
+          src="/bikini/bikini_logo-header.svg"
           alt="Bikini logo"
           width={120}
           height={35}
@@ -31,8 +30,7 @@ export default function Header() {
         >
           <Image 
             className=""
-            src="/whatsapp-icon.svg"
-            /*  src="/bikini/whatsapp-icon.svg" */
+            src="/bikini/whatsapp-icon.svg"
             alt="WhatsApp logo"
             width={17}
             height={17}
@@ -44,8 +42,7 @@ export default function Header() {
         >
           <Image 
             className=""
-            src="/basket_icon.svg"
-            /* src="/bikini/basket_icon.svg" */
+            src="/bikini/basket_icon.svg"
             alt="basket button"
             width={17}
             height={17}
@@ -57,8 +54,7 @@ export default function Header() {
         >
           <Image 
             className="mb-[-4px]"
-            src="/menu_icon.svg"
-            /* src="/bikini/menu_icon.svg" */
+            src="/bikini/menu_icon.svg"
             alt="menu button"
             width={25}
             height={25}
