@@ -10,8 +10,7 @@ export default function Home() {
         <h1 className="text-center lowercase text-[11px] font-middle mx-0 my-2">
           Онлайн шоурум пляжной одежды 
           <Image 
-            src="/map_point.svg"
-            /* src="/bikini/map_point.svg" */ 
+            src="/bikini/map_point.svg" 
             alt="Location Pin" 
             className="inline-block mx-1" 
             width={12}
@@ -21,7 +20,7 @@ export default function Home() {
         </h1>
         <div className="flex items-center justify-center w-full mx-0">
           <Link
-          className="relative w-full max-w-[1140px] min-h-[400px] bg-[url('/background-pic.jpg')] bg-center bg-no-repeat bg-cover mx-auto overflow-hidden z-0 border border-white rounded-[0.5rem]"
+          className="relative w-full max-w-[1140px] min-h-[400px] bg-[url('/bikini/background-pic.jpg')] bg-center bg-no-repeat bg-cover mx-auto overflow-hidden z-0 border border-white rounded-[0.5rem]"
           href="/offers"            
           >
             <div className="bg-[rgba(255,226,240,0.4)] w-full h-full absolute left-0 top-0 flex flex-col justify-center items-center">
