@@ -1,11 +1,7 @@
-import MenuItems from '../components/menuItems';
-import Header from '../components/header';
-
 export default function Menu() {
   return (
-    <div className="grid grid-rows-[65px_1fr_100px] min-h-screen mx-auto w-[98%] max-w-[1024px] font-[family-name:var(--font-exo2)]">
-      <Header/>
-      <MenuItems/>             
-    </div>
+    <section className="relative w-full max-w-[1140px] min-h-[400px] bg-white mx-auto border border-[rgba(0,0,0,0.15) rounded-[0.5rem] flex justify-center items-center">
+      <h2>Menu</h2>
+    </section>
   );
-}
+};
