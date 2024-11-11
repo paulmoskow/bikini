@@ -8,7 +8,6 @@ export default function Card({ picture, text, price }:{ picture:string; text:str
       <Image
         className="rounded-[0.25rem] object-cover w-[110px] h-[130px] object-center overflow-hidden"
         src={picture}
-        /*  src="/bikini/bikini_logo-header.svg" */
         alt="Bikini photo"
         width={110}
         height={130}
@@ -18,8 +17,7 @@ export default function Card({ picture, text, price }:{ picture:string; text:str
       <p className="text-[12px] font-semibold">{price} руб.</p>
       <Image 
         className="absolute right-[5px] bottom-[5px]"
-        src="/basket_icon.svg"
-        /* src="/bikini/menu_icon.svg" */
+        src="/bikini/basket_icon.svg"
         alt="menu button"
         width={15}
         height={15}
