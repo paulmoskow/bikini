@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function Card({ key, picture, text, price }:{ key:number; picture:string; text:string; price:number }) {
+export default function Card({ picture, text, price }:{ picture:string; text:string; price:number }) {
   return (
     <article 
       className="relative w-[120px] h-[190px] border-[2px] border-[#FFE2F0] rounded-[0.5rem] flex flex-col justify-center items-start shadow-sm hover:shadow-lg p-[3px]"
