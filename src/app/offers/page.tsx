@@ -30,7 +30,7 @@ export default function Offers() {
     if (target.id.includes("addToShopList")) {
       return;
     }
-    router.push(`/offers/${id.toString()}`); 
+    router.push(`/bikini/offers/${id.toString()}`); 
   };
 
   return (
