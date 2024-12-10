@@ -28,6 +28,16 @@ export default function RootLayoutServer({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+// Set the active line in the top of the app mounted only once
+  React.useEffect(() => {
+    const texts = ['Онлайн шоурум пляжной одежды', 'Бесплатная доставка при покупке', 'Неограниченная примерка без предоплат'];
+    let index = 0;
+
+    setInterval(() => {
+      index = (index + 1) % texts.length; 
+      document.getElementById('lineActive')!.textContent = texts[index];
+    }, 3000);
+  }, []);
 
   return (
     <html lang="ru">
@@ -37,8 +47,10 @@ export default function RootLayoutServer({
         <div className="grid grid-rows-[65px_1fr_100px] min-h-screen mx-auto w-[98%] max-w-[1024px] font-[family-name:var(--font-exo2)]">
         <Header />
         <main className="flex flex-col gap-1 row-start-2 align-center mx-0">
-            <h1 className="text-center lowercase text-[11px] font-middle mx-0 my-2">
-            Онлайн шоурум пляжной одежды 
+          <div className="flex justify-center">
+            <h1 id="lineActive" className="text-center lowercase text-[11px] font-middle mx-0 my-2">
+              Онлайн шоурум пляжной одежды 
+            </h1>
             <Image 
               src="/bikini/map_point.svg" 
               alt="Location Pin" 
@@ -46,8 +58,9 @@ export default function RootLayoutServer({
               width={12}
               height={12}
             />
-            Москва
-            </h1>
+            <h2 className="text-center lowercase text-[11px] font-middle mx-0 my-2">Москва</h2>              
+          </div>
+
             <div className="flex items-center justify-center w-full mx-0">
             {children}    
             </div>
