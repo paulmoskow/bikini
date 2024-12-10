@@ -31,18 +31,18 @@ export default function CardDetails({}) {
 
   return (
     <article 
-        className="relative w-[220px] h-[290px] border-[2px] border-[#FFE2F0] rounded-[0.5rem] flex flex-col justify-start items-center shadow-sm bg-white p-[3px]"
+        className="relative w-[220px] h-[350px] border-[2px] border-[#FFE2F0] rounded-[0.5rem] flex flex-col justify-start items-center shadow-sm bg-white p-[7px]"
     >
       <Image
-        className="rounded-[0.25rem] object-cover w-[110px] h-[130px] object-center overflow-hidden"
+        className="rounded-[0.25rem] object-cover w-[200px] h-[230px] object-center overflow-hidden mb-[5px]"
         src={card.picture}
         alt="Bikini photo"
-        width={110}
-        height={130}
+        width={200}
+        height={230}
         priority
       />
-      <h2 className="text-[9px]">{card.name}</h2>
-      <p className="text-[12px] font-semibold mt-[5px]">{card.price} руб.</p>
+      <h2 className="text-[11px] self-start">{card.name}</h2>
+      <p className="text-[14px] font-semibold my-[10px] self-start">{card.price} руб.</p>
       <Image 
         onClick={(e) => addToShoplist(card.id, e)}
         id="addToShopList"
@@ -53,7 +53,7 @@ export default function CardDetails({}) {
         height={15}
         priority            
       />
-    <p onClick={handleGoBack}>&larr; go back</p> 
+    <p onClick={handleGoBack} className="text-[12px] absolute left-[5px] bottom-[5px] cursor-pointer">&larr; go back</p> 
   </article>
   );
 }
