@@ -44,7 +44,7 @@ export default function RootLayoutServer({
     <body
         className={`${exo2.variable} antialiased`}
     >
-        <div className="grid grid-rows-[65px_1fr_100px] min-h-screen mx-auto w-[98%] max-w-[1024px] font-[family-name:var(--font-exo2)]">
+        <div className="grid grid-rows-[65px_1fr_65px] min-h-screen mx-auto w-[98%] max-w-[1024px] font-[family-name:var(--font-exo2)]">
         <Header />
         <main className="flex flex-col gap-1 row-start-2 align-center mx-0">
           <div className="flex justify-center">
