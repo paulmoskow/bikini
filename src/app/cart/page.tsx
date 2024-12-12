@@ -1,12 +1,15 @@
 "use client";
 
 import React from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "@/redux/store";
 import { useRouter } from "next/navigation";
+import { toggleAdded } from "../../redux/cardsSlice";
+import Image from "next/image";
 
 export default function Cart() {
   const router = useRouter();
+  const dispatch = useDispatch();
 
   const cards = useSelector((state: RootState) =>
     state.cards.cards.filter((card) => card.added === true)
@@ -15,19 +18,46 @@ export default function Cart() {
   const handleGoBack = () => {
     router.back();
   }
+
+  const deleteFromShoplist = (id: number) => {
+    dispatch(toggleAdded(id));
+  };
   
   const finalPrice = cards.reduce((total, card) => total + card.price, 0);
 
   return (
     <section className="flex flex-col bg-white border border-[rgba(0,0,0,0.15)] rounded-[0.5rem] px-[50px]">
-      <h2 className="px-[20px] py-[20px]">Твои покупки:</h2>
-      <ol className="list-decimal mb-2">
-        {cards.map((card) => (
-          <li className="text-[14px] relative pr-16 mb-2.5" key={card.id}>{card.name} <span className="absolute top-0 right-0"><span className="font-bold">{card.price}</span> руб.</span></li>
-        ))}
-      </ol>    
-      <p>Итоговая стоимость<span className="mx-10">&bull;</span><span className="font-bold ml-4">{finalPrice}</span> рублей</p>
-      <p className="my-[20px]">Оформить покупку</p>
+      <h2 className="text-center py-[20px]">
+        {cards.length > 0 ? "Твои покупки:" : "В твоей корзине пока пусто"}
+      </h2>
+      {cards.length > 0 && (
+        <ol className="list-decimal mb-2">
+          {cards.map((card) => (
+            <li className="text-[13px] relative pr-[70px] mb-2.5" key={card.id}>
+              {card.name} 
+              <span className="absolute top-0 right-0">
+                <span className="font-bold">{card.price}</span> руб.
+              </span>
+              <Image
+                onClick={() => deleteFromShoplist(card.id)}
+                className="absolute top-[4px] right-[-20px] cursor-pointer"
+                src="/bikini/trash.svg"
+                alt="Удалить товар"
+                width={11}
+                height={13}
+                priority
+              />
+            </li>
+          ))}
+        </ol> 
+      )}
+      <p className={cards.length > 0 ? "" : "text-white"}>
+        Итоговая стоимость<span className="mx-10">&bull;</span>
+        <span className="font-bold ml-4">{finalPrice}</span> рублей
+      </p>
+      <p className={cards.length > 0 ? "text-center my-[20px] border-[2px] border-[#FFE2F0] rounded-[0.5rem] cursor-pointer p-1 shadow-sm" : "text-white"}>
+        Оформить покупку
+      </p> 
       <p onClick={handleGoBack} className="text-[12px] mb-7 cursor-pointer">&larr; на предыдущую страницу</p> 
     </section>
   )
