@@ -53,7 +53,7 @@ export default function Cart() {
       )}
       <p className={cards.length > 0 ? "" : "hidden"}>
         Итоговая стоимость<span className="mx-8">&bull;</span>
-        <span className="font-bold ml-4">{finalPrice}</span> рублей
+        <span className="font-bold ml-4">{finalPrice}</span> руб.
       </p>
       <p className={cards.length > 0 ? "text-center my-[20px] border-[2px] border-[#FFE2F0] rounded-[0.5rem] cursor-pointer p-1 shadow-sm" : "hidden"}>
         Оформить покупку
