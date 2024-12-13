@@ -46,7 +46,7 @@ export default function RootLayoutServer({
     >
         <div className="grid grid-rows-[65px_1fr_65px] min-h-screen mx-auto w-[98%] max-w-[1024px] font-[family-name:var(--font-exo2)]">
         <Header />
-        <main className="flex flex-col gap-1 row-start-2 align-center mx-0">
+        <main className="flex flex-col gap-1 row-start-2 align-center">
           <div className="flex justify-center">
             <h1 id="lineActive" className="text-center lowercase text-[11px] font-middle mx-0 my-2">
               Онлайн шоурум пляжной одежды 
@@ -61,8 +61,8 @@ export default function RootLayoutServer({
             <h2 className="text-center lowercase text-[11px] font-middle mx-0 my-2">Москва</h2>              
           </div>
 
-            <div className="flex items-center justify-center w-full mx-0">
-            {children}    
+            <div className="flex items-center justify-center w-full">
+              {children}    
             </div>
         </main>
         <Footer />
