@@ -26,7 +26,7 @@ export default function Cart() {
   const finalPrice = cards.reduce((total, card) => total + card.price, 0);
 
   return (
-    <section className="flex flex-col bg-white border border-[rgba(0,0,0,0.15)] rounded-[0.5rem] px-[50px]">
+    <section className="flex flex-col bg-white border border-[rgba(0,0,0,0.15)] rounded-[0.5rem] px-[50px] sm:w-[500px] w-11/12">
       <h2 className="text-center py-[20px]">
         {cards.length > 0 ? "Твои покупки:" : "В твоей корзине пока пусто"}
       </h2>
@@ -51,14 +51,14 @@ export default function Cart() {
           ))}
         </ol> 
       )}
-      <p className={cards.length > 0 ? "" : "text-white"}>
-        Итоговая стоимость<span className="mx-10">&bull;</span>
+      <p className={cards.length > 0 ? "" : "hidden"}>
+        Итоговая стоимость<span className="mx-8">&bull;</span>
         <span className="font-bold ml-4">{finalPrice}</span> рублей
       </p>
-      <p className={cards.length > 0 ? "text-center my-[20px] border-[2px] border-[#FFE2F0] rounded-[0.5rem] cursor-pointer p-1 shadow-sm" : "text-white"}>
+      <p className={cards.length > 0 ? "text-center my-[20px] border-[2px] border-[#FFE2F0] rounded-[0.5rem] cursor-pointer p-1 shadow-sm" : "hidden"}>
         Оформить покупку
       </p> 
-      <p onClick={handleGoBack} className="text-[12px] mb-7 cursor-pointer">&larr; на предыдущую страницу</p> 
+      <p onClick={handleGoBack} className="text-[12px] mb-7 cursor-pointer text-center">&larr; на предыдущую страницу</p> 
     </section>
   )
 }

@@ -67,7 +67,7 @@ export default function CardDetailsClient({
         height={15}
         priority            
       />
-    <p onClick={handleGoBack} className="text-[12px] absolute left-[5px] bottom-[5px] cursor-pointer">&larr; go back</p> 
+    <p onClick={handleGoBack} className="text-[12px] absolute left-[5px] bottom-[5px] cursor-pointer">&larr; на предыдущую страницу</p> 
   </article>
   );
 }

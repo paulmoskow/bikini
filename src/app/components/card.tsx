@@ -39,7 +39,7 @@ export default function Card({
   return (
     <article 
       onClick={onClick}
-      className="relative w-[120px] h-[190px] border-[2px] border-[#FFE2F0] rounded-[0.5rem] flex flex-col justify-start shadow-sm hover:shadow-lg p-[3px]"
+      className="relative w-[120px] h-[190px] border-[2px] border-[#FFE2F0] rounded-[0.5rem] flex flex-col justify-start shadow-sm hover:shadow-lg hover:scale-105 p-[3px]"
     >
       <Image
         className="rounded-[0.25rem] object-cover w-[110px] h-[130px] object-center overflow-hidden"
