@@ -18,8 +18,9 @@ const exo2 = Exo_2({
 export const metadata: Metadata = {
   title: "Bikini showroom by Pavel Moskov",
   description: "Multipage app for online shopping on Nextjs",
-  icons:
-    { icon: "/bikini/bikinibomb_logo.svg" },
+  icons: { 
+    icon: "/bikini/bikinibomb_logo.svg",
+  },
 };
 
 export default function RootLayoutServer({
