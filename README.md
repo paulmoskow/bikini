@@ -1,8 +1,8 @@
-# Multi-page application for online shopping
+# Single-page application for online shopping
 
 ## Overview
 
-This is a multi-page business application for online retail in the fashion industry. Development is still ongoing and this tech stack is experimental for me, so I would appreciate a code review.
+This is a single-page business application for online retail in the fashion industry. Development is still ongoing and this tech stack is experimental for me, so I would appreciate a code review.
 
 ## Features
 
