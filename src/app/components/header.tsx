@@ -6,9 +6,13 @@ import { useSelector } from "react-redux";
 import { RootState } from "@/redux/store"; 
 
 export default function Header() {
-  const cards = useSelector(( state: RootState ) => 
+  const addedCards = useSelector(( state: RootState ) => 
     state.cards.cards.filter((card) => card.added === true)
   );
+
+  const cartIcon = addedCards.length > 0
+    ? "/bikini/basket_icon_active.svg" 
+    : "/bikini/basket_icon.svg";
 
   return (
     <header className="flex row-start-1 items-center justify-between px-3 bg-white rounded-[0.5rem] h-[60px] mt-1 border border-[rgba(0,0,0,0.15)]">
@@ -50,7 +54,7 @@ export default function Header() {
         >
           <Image 
             className=""
-            src={cards.length > 0? "/bikini/basket_icon_active.svg" : "/bikini/basket_icon.svg"}
+            src={cartIcon}
             alt="basket button"
             width={17}
             height={17}
