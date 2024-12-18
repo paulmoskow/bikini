@@ -1,6 +1,7 @@
 import Link from 'next/link';
 
 export default function Home() {
+  
   return (
     <Link
       className="relative w-full max-w-[1140px] min-h-[400px] bg-[url('/bikini/background-pic.jpg')] bg-center bg-no-repeat bg-cover mx-auto overflow-hidden z-0 border border-white rounded-[0.5rem]"
